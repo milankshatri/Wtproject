@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            form{
+			position: relative;
+			height: 200px;
+			width: 400px;
+			background-color: rgba(220,230,200,0.4 );
+			padding: 20px;
+			margin: auto;
+			margin-top: 40px;
+			box-shadow: 20px 20px 20px grey;
+
+		}
+		span,input{
+			font-family: cursive;
+		}
+        a{
+            background:grey;
+			padding: 5px;
+			text-align: right;
+			border-radius: 5px;
+			color: white;
+			font-weight: bold;
+			margin-top: 5px;
+            text-decoration: none;
+        }
+        </style>
+    </head>
+    <body>
+        <form action="update.php" method="POST">
+            <a href="Entry.html">New Entry</a>&nbsp;&nbsp;
+            <a href="view.php">View Entry</a>
+            <p style="font-weight: bolder; color:red; font-size: 20px;">Fill input section</p>
+                <table>
+                   <tr>
+                       <td><span>Enter Visitor Id That Needs to be modified:</span></td> 
+                        <td><input type="number" min="0" name="idd" required></td>
+                    </tr>
+                    <tr>
+                        <td><span>Exit Time(Hr:Min:Sec):</span></td>
+                        <td><input type="text" id="exit" name="exit" onclick="time()" required></td>
+                    </tr>
+                    <tr>
+                       <td><input type="submit" value="Enter the data"></td>
+                    </tr>
+                    </table>
+        </form>
+        <script>
+             function time(){
+                var time = document.getElementById("exit");
+                var d = new Date();
+                var n = d.getHours();
+                var i = d.getMinutes();
+                var j = d.getSeconds();
+                time.value = n+":"+i+":"+j;
+            }
+        </script>
+    </body>
+</html>
