@@ -40,6 +40,6 @@ mysqli_close($con);
 
     <br><br>
     <a href="view.php">View Entries</a>
-    <a href="update.php">Update</a>
+    <a href="update.html">Update</a>
 </body>
 </html>
